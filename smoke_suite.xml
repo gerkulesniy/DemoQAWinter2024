@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke" parallel="none">
+    <test name="Smoke">
+        <classes>
+            <class name="ButtonsTest"></class>
+            <class name="FrameTest"></class>
+            <class name="TextBoxTest"></class>
+            <class name="WebTableTest"></class>
+            <class name="FluentWaitDemo"></class>
+            <class name="SelectDemo"></class>
+            <class name="MenuTest"></class>
+            <class name="DemoTest"></class>
+            <class name="CheckBoxTest"></class>
+            <class name="BaseTest"></class>
+            <class name="AlertTest"></class>
+        </classes>
+    </test>
+</suite>
