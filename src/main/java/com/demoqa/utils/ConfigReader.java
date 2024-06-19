@@ -10,7 +10,7 @@ public class ConfigReader {
 
     private static Properties properties = new Properties();
 
-    private ConfigReader(){
+    public ConfigReader(){
         //Singleton pattern
     }
 

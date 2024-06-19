@@ -4,6 +4,7 @@ import com.demoqa.helper.BrowserHelper;
 import com.demoqa.helper.IframeHelper;
 import com.demoqa.helper.WebElementActions;
 import com.demoqa.pages.*;
+import com.demoqa.utils.ConfigReader;
 import com.demoqa.utils.RandomUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,9 +20,11 @@ public class BaseTest {
     protected BrowserHelper browserHelper;
     protected DemoQAPages demoQAPages;
     protected IframeHelper iframeHelper;
+    protected ConfigReader configReader;
 
     @BeforeClass(alwaysRun = true)
     public void setUp(){
+        configReader = new ConfigReader();
         driver = DriverManager.getDriver();
         randomUtils = new RandomUtils();
         webElementActions = new WebElementActions();
