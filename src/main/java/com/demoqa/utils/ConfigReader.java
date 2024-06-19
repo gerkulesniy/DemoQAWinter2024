@@ -16,10 +16,10 @@ public class ConfigReader {
 
     static {
         try {
-            String path = "C:\\Users\\User\\IdeaProjects\\DemoQAWinter2024\\src\\main\\resources\\app.properties";
-            FileInputStream fileInputStream = new FileInputStream(path);
-            properties.load(fileInputStream);
-            fileInputStream.close();
+            InputStream inputStream = ConfigReader.class.getClassLoader().getResourceAsStream("app.properties");
+
+            properties.load(inputStream);
+
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
