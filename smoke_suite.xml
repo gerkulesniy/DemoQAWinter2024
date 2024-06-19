@@ -6,7 +6,6 @@
             <class name="ButtonsTest"></class>
             <class name="FrameTest"></class>
             <class name="TextBoxTest"></class>
-            <class name="WebTableTest"></class>
             <class name="FluentWaitDemo"></class>
             <class name="SelectDemo"></class>
             <class name="MenuTest"></class>
