@@ -3,11 +3,12 @@ package com.demoqa.utils;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 
 public class ConfigReader {
 
-    private static Properties properties;
+    private static Properties properties = new Properties();
 
     private ConfigReader(){
         //Singleton pattern
@@ -17,7 +18,6 @@ public class ConfigReader {
         try {
             String path = "C:\\Users\\User\\IdeaProjects\\DemoQAWinter2024\\src\\main\\resources\\app.properties";
             FileInputStream fileInputStream = new FileInputStream(path);
-            properties = new Properties();
             properties.load(fileInputStream);
             fileInputStream.close();
         } catch (FileNotFoundException e) {
@@ -26,6 +26,8 @@ public class ConfigReader {
             throw new RuntimeException(e);
         }
     }
+
+
 
     public static String getValue(String key){
         return properties.getProperty(key).trim();
